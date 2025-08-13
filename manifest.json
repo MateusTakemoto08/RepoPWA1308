@@ -1,0 +1,23 @@
+{
+  "name": "Mundo da Aviação",
+  "short_name": "Aviação",
+  "description": "Um site completo sobre o mundo da aviação.",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#343a40",
+  "theme_color": "#343a40",
+  "icons": [
+    {
+      "src": "/RepoPWA1308/img/Logo-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/RepoPWA1308/img/Logo-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+ 
