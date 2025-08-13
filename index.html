@@ -12,25 +12,29 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link 
-        rel="stylesheet" 
-        href="style.css" />
+    <link rel="stylesheet" href="style.css" />
 
-    <link 
-        rel="manifest" 
-        href="manifest.json" 
-    />
+    <link rel="manifest" href="manifest.json" />
 
-    <meta 
-        name="theme-color" 
-        content="#343a40" 
-    />
+    <meta name="theme-color" content="#343a40" />
 
-    <link 
-        rel="apple-touch-icon" 
-        href="./img/Logo-192x192.png" 
-    />
+    <link rel="apple-touch-icon" href="./img/Logo-192x192.png" />
 
+    <!-- PWA - Registrar Service Worker -->
+    <script>
+        
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/RepoPWA1308/service-worker.js")
+            .then((reg) =>
+              console.log("[PWA] Service Worker registrado:", reg.scope)
+            )
+            .catch((err) => console.error("[PWA] Erro ao registrar SW:", err));
+        });
+      }
+    </script>
+    
   </head>
   <body>
     <!-- Header -->
