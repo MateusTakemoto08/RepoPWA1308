@@ -21,3 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// PWA - Registrar Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('/RepoPWA1308/service-worker.js')
+      .then(reg => console.log('[PWA] Service Worker registrado:', reg.scope))
+      .catch(err => console.error('[PWA] Erro ao registrar SW:', err));
+  });
+}
